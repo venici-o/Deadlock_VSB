@@ -610,4 +610,415 @@ AVAILABLE 10 5 7
 [m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: ./banker 10 5 - ./banker\[mcustomer.txt: linha 1 invalida; esperados 2 inteiros nao negativos separados por virgula.
 [?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
 ]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspace/deadlock/Deadlock_VSB [90mmain[90m* [36m⇡
-[31m❯[m [38;2;205;214;244m[K[2Cg[3C[38;2;108;112;134mit commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[3C[38;2;243;139;168mg[38;2;108;112;134mit commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[3C[38;2;243;139;168mi[38;2;108;112;134mt commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[4C[38;2;243;139;168mt[38;2;108;112;134m commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[5C[3D[38;2;137;180;250mgit[38;2;108;112;134m commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[5C[38;2;137;180;250m [38;2;108;112;134mcommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[6C [38;2;108;112;134mcommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[6Ca[K[7C[38;2;108;112;134mdd evidencias.log[38;2;205;214;244m[7C[38;2;242;205;205ma[38;2;108;112;134mdd evidencias.log[38;2;205;214;244m[7C[38;2;242;205;205md[38;2;108;112;134md evidencias.log[38;2;205;214;244m[8C[38;2;242;205;205md[38;2;108;112;134m evidencias.log[38;2;205;214;244m[9C[38;2;242;205;205m [38;2;108;112;134mevidencias.log[38;2;205;214;244m[10C [38;2;108;112;134mevidencias.log[38;2;205;214;244m[10C[8Dgit add evidencias.log[24C[24C[22D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205madd[38;2;205;214;244m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[24C[38;2;242;205;205;4m [38;2;205;214;244;24m[25C [25Cb[26C[38;2;242;205;205;4mb[38;2;205;214;244;24m[26C[38;2;108;112;134manker [38;2;205;214;244m[26C[38;2;242;205;205;4ma[38;2;108;112;134;24mnker [38;2;205;214;244m[27C[38;2;242;205;205;4mn[38;2;108;112;134;24mker [38;2;205;214;244m[28C[26Dgit add evidencias.log banker [32C[30D[38;2;137;180;250mgit[38;2;205;214;244
+[31m❯[m [38;2;205;214;244m[K[2Cg[3C[38;2;108;112;134mit commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[3C[38;2;243;139;168mg[38;2;108;112;134mit commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[3C[38;2;243;139;168mi[38;2;108;112;134mt commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[4C[38;2;243;139;168mt[38;2;108;112;134m commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[5C[3D[38;2;137;180;250mgit[38;2;108;112;134m commit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[5C[38;2;137;180;250m [38;2;108;112;134mcommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[6C [38;2;108;112;134mcommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[6Ca[K[7C[38;2;108;112;134mdd evidencias.log[38;2;205;214;244m[7C[38;2;242;205;205ma[38;2;108;112;134mdd evidencias.log[38;2;205;214;244m[7C[38;2;242;205;205md[38;2;108;112;134md evidencias.log[38;2;205;214;244m[8C[38;2;242;205;205md[38;2;108;112;134m evidencias.log[38;2;205;214;244m[9C[38;2;242;205;205m [38;2;108;112;134mevidencias.log[38;2;205;214;244m[10C [38;2;108;112;134mevidencias.log[38;2;205;214;244m[10C[8Dgit add evidencias.log[24C[24C[22D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205madd[38;2;205;214;244m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[24C[38;2;242;205;205;4m [38;2;205;214;244;24m[25C [25Cb[26C[38;2;242;205;205;4mb[38;2;205;214;244;24m[26C[38;2;108;112;134manker [38;2;205;214;244m[26C[38;2;242;205;205;4ma[38;2;108;112;134;24mnker [38;2;205;214;244m[27C[38;2;242;205;205;4mn[38;2;108;112;134;24mker [38;2;205;214;244m[28C[26Dgit add evidencias.log banker [32C[30D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205madd[38;2;205;214;244m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m [38;2;242;205;205;4mbanker[38;2;205;214;244;24m [32C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[K[31C[38;2;242;205;205;4m,[38;2;205;214;244;24m[32C[7D[38;2;242;205;205mbanker,[38;2;205;214;244m[32C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[K[31C[6D[38;2;242;205;205;4mbanker[38;2;205;214;244;24m[31C[38;2;242;205;205;4m.[38;2;205;214;244;24m[32C[38;2;108;112;134mc [38;2;205;214;244m[32C[38;2;242;205;205;4mc[38;2;108;112;134;24m [38;2;205;214;244m[33C[38;2;242;205;205;4m [38;2;205;214;244;24m[34C [34CM[35C[38;2;242;205;205;4mM[38;2;205;214;244;24m[35C[38;2;108;112;134makefile [38;2;205;214;244m[35C[38;2;242;205;205;4ma[38;2;108;112;134;24mkefile [38;2;205;214;244m[36C[38;2;242;205;205;4mk[38;2;108;112;134;24mefile [38;2;205;214;244m[37C[38;2;242;205;205;4me[38;2;108;112;134;24mfile [38;2;205;214;244m[38C[38;2;242;205;205;4mf[38;2;108;112;134;24mile [38;2;205;214;244m[39C[38;2;242;205;205;4mi[38;2;108;112;134;24mle [38;2;205;214;244m[40C[38;2;242;205;205;4ml[38;2;108;112;134;24me [38;2;205;214;244m[41C[38;2;242;205;205;4me[38;2;108;112;134;24m [38;2;205;214;244m[42C[?2004l[?2031l[>4;0m>[K[42C
+[m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: git add evidencias.log banker.c Makefile - git\[m[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
+]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspace/deadlock/Deadlock_VSB [90mmain[90m* [36m⇡
+[35m❯[m [38;2;205;214;244m[K[2Cg[3C[38;2;108;112;134mit add evidencias.log banker.c Makefile[38;2;205;214;244m[3C[38;2;243;139;168mg[38;2;108;112;134mit add evidencias.log banker.c Makefile[38;2;205;214;244m[3C[38;2;243;139;168mi[38;2;108;112;134mt add evidencias.log banker.c Makefile[38;2;205;214;244m[4C[38;2;243;139;168mt[38;2;108;112;134m add evidencias.log banker.c Makefile[38;2;205;214;244m[5C[3D[38;2;137;180;250mgit[38;2;108;112;134m add evidencias.log banker.c Makefile[38;2;205;214;244m[5C[38;2;137;180;250m [38;2;108;112;134madd evidencias.log banker.c Makefile[38;2;205;214;244m[6C [38;2;108;112;134madd evidencias.log banker.c Makefile[38;2;205;214;244m[6Cc[K[7C[38;2;108;112;134mommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[7C[38;2;242;205;205;4mc[38;2;108;112;134;24mommit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[7C[38;2;242;205;205;4mo[38;2;108;112;134;24mmmit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[8C[38;2;242;205;205;4mm[38;2;108;112;134;24mmit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[9C[38;2;242;205;205;4mm[38;2;108;112;134;24mit -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[10C[38;2;242;205;205;4mi[38;2;108;112;134;24mt -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[11C[5D[38;2;242;205;205mcommi[38;2;108;112;134mt -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[11C[38;2;242;205;205mt[38;2;108;112;134m -m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[12C[38;2;242;205;205m [38;2;108;112;134m-m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[13C [38;2;108;112;134m-m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[13C-[38;2;108;112;134mm "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[14C[38;2;242;205;205m-[38;2;108;112;134mm "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[14C[38;2;242;205;205mm[38;2;108;112;134m "feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[15C[38;2;242;205;205m [38;2;108;112;134m"feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[16C [38;2;108;112;134m"feat: vetor dinamico p/ argumentos"[38;2;205;214;244m[16C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[14Dgit commit -m ""[K[17C[15D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205mcommit[38;2;205;214;244m [38;2;242;205;205m-m[38;2;205;214;244m [38;2;166;227;161m""[38;2;205;214;244m[17C[38;2;166;227;161mf"[38;2;205;214;244m[18C[38;2;166;227;161me"[38;2;205;214;244m[19C[38;2;166;227;161ma"[38;2;205;214;244m[20C[38;2;166;227;161mt"[38;2;205;214;244m[21C[38;2;166;227;161m:"[38;2;205;214;244m[22C[C[38;2;108;112;134m06_Deadlock.pdf [38;2;205;214;244m[22C[38;2;166;227;161m "[38;2;205;214;244m[K[23C[38;2;166;227;161mc"[38;2;205;214;244m[24C[38;2;166;227;161ma"[38;2;205;214;244m[25C[38;2;166;227;161mr"[38;2;205;214;244m[26C[38;2;166;227;161mr"[38;2;205;214;244m[27C[38;2;166;227;161me"[38;2;205;214;244m[28C[38;2;166;227;161mg"[38;2;205;214;244m[29C[38;2;166;227;161ma"[38;2;205;214;244m[30C[38;2;166;227;161m "[38;2;205;214;244m[31C[38;2;166;227;161mm"[38;2;205;214;244m[32C[38;2;166;227;161ma"[38;2;205;214;244m[33C[38;2;166;227;161mx"[38;2;205;214;244m[34C[38;2;166;227;161m "[38;2;205;214;244m[35C[38;2;166;227;161md"[38;2;205;214;244m[36C[38;2;166;227;161mo"[38;2;205;214;244m[37C[38;2;166;227;161ms"[38;2;205;214;244m[38C[38;2;166;227;161m "[38;2;205;214;244m[39C[38;2;166;227;161mc"[38;2;205;214;244m[40C[38;2;166;227;161ml"[38;2;205;214;244m[41C[38;2;166;227;161mi"[38;2;205;214;244m[42C[38;2;166;227;161me"[38;2;205;214;244m[43C[38;2;166;227;161mn"[38;2;205;214;244m[44C[38;2;166;227;161mt"[38;2;205;214;244m[45C[38;2;166;227;161me"[38;2;205;214;244m[46C[38;2;166;227;161ms"[38;2;205;214;244m[47C[38;2;166;227;161m "[38;2;205;214;244m[48C[38;2;166;227;161mi"[38;2;205;214;244m[49C[38;2;166;227;161ma"[38;2;205;214;244m[50C[38;2;166;227;161m "[38;2;205;214;244m[51C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[50C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[49C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[48C[38;2;166;227;161mv"[38;2;205;214;244m[49C[38;2;166;227;161mi"[38;2;205;214;244m[50C[38;2;166;227;161ma"[38;2;205;214;244m[51C[38;2;166;227;161m "[38;2;205;214;244m[52C[38;2;166;227;161mc"[38;2;205;214;244m[53C[38;2;166;227;161mu"[38;2;205;214;244m[54C[38;2;166;227;161ms"[38;2;205;214;244m[55C[38;2;166;227;161mt"[38;2;205;214;244m[56C[38;2;166;227;161mo"[38;2;205;214;244m[57C[38;2;166;227;161mm"[38;2;205;214;244m[58C[38;2;166;227;161me"[38;2;205;214;244m[59C[38;2;166;227;161mr"[38;2;205;214;244m[60C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[59C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[58C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[57C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[56C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[55C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[54C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[53C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[52C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[51C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[50C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[49C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m[K[48C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;166;227;161m"[38;2;205;214;244m
+
+[REVISAO-CLIENTES-a1bbd43e3c] INICIO 2026-11-16T18:51:42-03:00
+Verificacao automatizada executada pelo assistente; nao representa execucao manual do aluno.
+Fonte: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker.c
+SHA256 banker.c: 9625814e16c48b408d69109f976e8e08ab0055d7c8ae6af691541a0c54aec941
+Compilacao de uma copia exata de banker.c e Makefile em diretorio temporario.
+Diretorio: /tmp/banker-revisao-clientes-9wpb88js
+CWD: /tmp/banker-revisao-clientes-9wpb88js
+$ make clean
+EXIT: 0
+STDOUT:
+rm -f banker
+STDERR:
+(vazio)
+CWD: /tmp/banker-revisao-clientes-9wpb88js
+$ make
+EXIT: 0
+STDOUT:
+cc -std=c11 -Wall -Wextra -Wpedantic banker.c -o banker
+STDERR:
+(vazio)
+CASO 01: original_bom_crlf
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=0; stdout exato: 'MAXIMUM (5 clientes)\n7 5 3\n3 2 2\n9 0 2\n2 2 2\n4 3 3\nAVAILABLE 10 5 7\n'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/01-original_bom_crlf
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 0
+STDOUT:
+MAXIMUM (5 clientes)
+7 5 3
+3 2 2
+9 0 2
+2 2 2
+4 3 3
+AVAILABLE 10 5 7
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 02: dimensoes_incompativeis
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'esperados 2 inteiros'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/02-dimensoes_incompativeis
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 2 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 03: um_cliente_um_recurso
+customer.txt (bytes Python): b'5'
+Esperado: exit=0; stdout exato: 'MAXIMUM (1 clientes)\n5\nAVAILABLE 10\n'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/03-um_cliente_um_recurso
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10
+EXIT: 0
+STDOUT:
+MAXIMUM (1 clientes)
+5
+AVAILABLE 10
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 04: dois_clientes_dois_recursos
+customer.txt (bytes Python): b'1,2\n3,4\n'
+Esperado: exit=0; stdout exato: 'MAXIMUM (2 clientes)\n1 2\n3 4\nAVAILABLE 10 10\n'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/04-dois_clientes_dois_recursos
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 10
+EXIT: 0
+STDOUT:
+MAXIMUM (2 clientes)
+1 2
+3 4
+AVAILABLE 10 10
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 05: zero
+customer.txt (bytes Python): b'0\n'
+Esperado: exit=0; stdout exato: 'MAXIMUM (1 clientes)\n0\nAVAILABLE 0\n'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/05-zero
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 0
+EXIT: 0
+STDOUT:
+MAXIMUM (1 clientes)
+0
+AVAILABLE 0
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 06: arquivo_ausente
+customer.txt (bytes Python): None
+Esperado: exit=1; stderr contem: 'customer.txt'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/06-arquivo_ausente
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: No such file or directory
+RESULTADO: PASSOU
+CASO 07: arquivo_vazio
+customer.txt (bytes Python): b''
+Esperado: exit=1; stderr contem: 'arquivo de clientes vazio'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/07-arquivo_vazio
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Erro de leitura ou arquivo de clientes vazio.
+RESULTADO: PASSOU
+CASO 08: segunda_linha_incompleta
+customer.txt (bytes Python): b'1,2,3\n4,5\n'
+Esperado: exit=1; stderr contem: 'linha 2 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/08-segunda_linha_incompleta
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 2 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 09: coluna_extra
+customer.txt (bytes Python): b'1,2,3,4'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/09-coluna_extra
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 10: campo_vazio
+customer.txt (bytes Python): b'1,,3'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/10-campo_vazio
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 11: maximo_negativo
+customer.txt (bytes Python): b'1,-2,3'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/11-maximo_negativo
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 12: maximo_texto
+customer.txt (bytes Python): b'1,abc,3'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/12-maximo_texto
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 13: maximo_texto_residual
+customer.txt (bytes Python): b'1,2x,3'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/13-maximo_texto_residual
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 14: maximo_overflow
+customer.txt (bytes Python): b'1,99999999999999999999999999999,3'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/14-maximo_overflow
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 15: nul_embutido
+customer.txt (bytes Python): b'1,2,3\x00texto'
+Esperado: exit=1; stderr contem: 'linha 1 invalida'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/15-nul_embutido
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 16: sem_argumentos
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'Uso:'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/16-sem_argumentos
+$ /tmp/banker-revisao-clientes-9wpb88js/banker
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Uso: /tmp/banker-revisao-clientes-9wpb88js/banker recurso1 recurso2 ...
+RESULTADO: PASSOU
+CASO 17: argumento_texto
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'invalida: abc'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/17-argumento_texto
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 abc 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Quantidade de recurso invalida: abc
+RESULTADO: PASSOU
+CASO 18: argumento_negativo
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'invalida: -2'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/18-argumento_negativo
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 -2 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Quantidade de recurso invalida: -2
+RESULTADO: PASSOU
+CASO 19: argumento_texto_residual
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'invalida: 2x'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/19-argumento_texto_residual
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 2x 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Quantidade de recurso invalida: 2x
+RESULTADO: PASSOU
+CASO 20: argumento_overflow
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem: 'invalida: 99999999999999999999999999999'
+CWD: /tmp/banker-revisao-clientes-9wpb88js/20-argumento_overflow
+$ /tmp/banker-revisao-clientes-9wpb88js/banker 10 99999999999999999999999999999 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+Quantidade de recurso invalida: 99999999999999999999999999999
+RESULTADO: PASSOU
+RESUMO: 20/20 casos passaram; compilacao sem avisos.
+Limites: sem simulacao de falha de memoria ou teste em outros sistemas; Banker completo ainda nao implementado.
+[REVISAO-CLIENTES-a1bbd43e3c] FIM 2026-11-16T18:51:42-03:00
+[K[47C[?2004l[?2031l[>4;0m>[48C
+[m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: git commit -m "feat: carrega max dos clientes" - git\[m[main 0ba2820] feat: carrega max dos clientes
+ 3 files changed, 148 insertions(+), 2 deletions(-)
+ create mode 100644 Makefile
+[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
+]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspace/deadlock/Deadlock_VSB [90mmain[90m* [36m⇡
+[35m❯[m [38;2;205;214;244m[K[2Cg[3C[38;2;108;112;134mit commit -m "feat: carrega max dos clientes"[38;2;205;214;244m[3C[38;2;243;139;168mg[38;2;108;112;134mit commit -m "feat: carrega max dos clientes"[38;2;205;214;244m[3C[38;2;243;139;168mi[38;2;108;112;134mt commit -m "feat: carrega max dos clientes"[38;2;205;214;244m[4C[38;2;243;139;168mt[38;2;108;112;134m commit -m "feat: carrega max dos clientes"[38;2;205;214;244m[5C[3D[38;2;137;180;250mgit[38;2;108;112;134m commit -m "feat: carrega max dos clientes"[38;2;205;214;244m[5C[38;2;137;180;250m [38;2;108;112;134mcommit -m "feat: carrega max dos clientes"[38;2;205;214;244m[6C [38;2;108;112;134mcommit -m "feat: carrega max dos clientes"[38;2;205;214;244m[6Cc[38;2;108;112;134mommit -m "feat: carrega max dos clientes"[38;2;205;214;244m[7C[38;2;242;205;205;4mc[38;2;108;112;134;24mommit -m "feat: carrega max dos clientes"[38;2;205;214;244m[7C[38;2;242;205;205;4ml[38;2;205;214;244;24m[K[8C[38;2;108;112;134mone https://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[8C[2D[38;2;242;205;205mcl[38;2;108;112;134mone https://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[8C[38;2;242;205;205mo[38;2;108;112;134mne https://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[9C[38;2;242;205;205mn[38;2;108;112;134me https://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[10C[38;2;242;205;205me[38;2;108;112;134m https://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[11C[38;2;242;205;205m [38;2;108;112;134mhttps://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[12C [38;2;108;112;134mhttps://github.com/venici-o/Deadlock_VSB.git[38;2;205;214;244m[12C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[10Dgit clone https://github.com/DoctahW/starkiller.git[K[53C[51D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205mclone[38;2;205;214;244m [38;2;242;205;205mhttps://github.com/DoctahW/starkiller.git[38;2;205;214;244m[53C[?2004l[?2031l[>4;0m>
+[m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: git clone https://github.com/DoctahW/starkiller.git - git\[mCloning into 'starkiller'...
+[Kremote: Enumerating objects: 393, done.
+[Kremote: Counting objects:   0% (1/393)[Kremote: Counting objects:   1% (4/393)[Kremote: Counting objects:   2% (8/393)[Kremote: Counting objects:   3% (12/393)[Kremote: Counting objects:   4% (16/393)[Kremote: Counting objects:   5% (20/393)[Kremote: Counting objects:   6% (24/393)[Kremote: Counting objects:   7% (28/393)[Kremote: Counting objects:   8% (32/393)[Kremote: Counting objects:   9% (36/393)[Kremote: Counting objects:  10% (40/393)[Kremote: Counting objects:  11% (44/393)[Kremote: Counting objects:  12% (48/393)[Kremote: Counting objects:  13% (52/393)[Kremote: Counting objects:  14% (56/393)[Kremote: Counting objects:  15% (59/393)[Kremote: Counting objects:  16% (63/393)[Kremote: Counting objects:  17% (67/393)[Kremote: Counting objects:  18% (71/393)[Kremote: Counting objects:  19% (75/393)[Kremote: Counting objects:  20% (79/393)[Kremote: Counting objects:  21% (83/393)[Kremote: Counting objects:  22% (87/393)[Kremote: Counting objects:  23% (91/393)[Kremote: Counting objects:  24% (95/393)[Kremote: Counting objects:  25% (99/393)[Kremote: Counting objects:  26% (103/393)[Kremote: Counting objects:  27% (107/393)[Kremote: Counting objects:  28% (111/393)[Kremote: Counting objects:  29% (114/393)[Kremote: Counting objects:  30% (118/393)[Kremote: Counting objects:  31% (122/393)[Kremote: Counting objects:  32% (126/393)[Kremote: Counting objects:  33% (130/393)[Kremote: Counting objects:  34% (134/393)[Kremote: Counting objects:  35% (138/393)[Kremote: Counting objects:  36% (142/393)[Kremote: Counting objects:  37% (146/393)[Kremote: Counting objects:  38% (150/393)[Kremote: Counting objects:  39% (154/393)[Kremote: Counting objects:  40% (158/393)[Kremote: Counting objects:  41% (162/393)[Kremote: Counting objects:  42% (166/393)[Kremote: Counting objects:  43% (169/393)[Kremote: Counting objects:  44% (173/393)[Kremote: Counting objects:  45% (177/393)[Kremote: Counting objects:  46% (181/393)[Kremote: Counting objects:  47% (185/393)[Kremote: Counting objects:  48% (189/393)[Kremote: Counting objects:  49% (193/393)[Kremote: Counting objects:  50% (197/393)[Kremote: Counting objects:  51% (201/393)[Kremote: Counting objects:  52% (205/393)[Kremote: Counting objects:  53% (209/393)[Kremote: Counting objects:  54% (213/393)[Kremote: Counting objects:  55% (217/393)[Kremote: Counting objects:  56% (221/393)[Kremote: Counting objects:  57% (225/393)[Kremote: Counting objects:  58% (228/393)[Kremote: Counting objects:  59% (232/393)[Kremote: Counting objects:  60% (236/393)[Kremote: Counting objects:  61% (240/393)[Kremote: Counting objects:  62% (244/393)[Kremote: Counting objects:  63% (248/393)[Kremote: Counting objects:  64% (252/393)[Kremote: Counting objects:  65% (256/393)[Kremote: Counting objects:  66% (260/393)[Kremote: Counting objects:  67% (264/393)[Kremote: Counting objects:  68% (268/393)[Kremote: Counting objects:  69% (272/393)[Kremote: Counting objects:  70% (276/393)[Kremote: Counting objects:  71% (280/393)[Kremote: Counting objects:  72% (283/393)[Kremote: Counting objects:  73% (287/393)[Kremote: Counting objects:  74% (291/393)[Kremote: Counting objects:  75% (295/393)[Kremote: Counting objects:  76% (299/393)[Kremote: Counting objects:  77% (303/393)[Kremote: Counting objects:  78% (307/393)[Kremote: Counting objects:  79% (311/393)[Kremote: Counting objects:  80% (315/393)[Kremote: Counting objects:  81% (319/393)[Kremote: Counting objects:  82% (323/393)[Kremote: Counting objects:  83% (327/393)[Kremote: Counting objects:  84% (331/393)[Kremote: Counting objects:  85% (335/393)[Kremote: Counting objects:  86% (338/393)[Kremote: Counting objects:  87% (342/393)[Kremote: Counting objects:  88% (346/393)[Kremote: Counting objects:  89% (350/393)[Kremote: Counting objects:  90% (354/393)[Kremote: Counting objects:  91% (358/393)[Kremote: Counting objects:  92% (362/393)[Kremote: Counting objects:  93% (366/393)[Kremote: Counting objects:  94% (370/393)[Kremote: Counting objects:  95% (374/393)[Kremote: Counting objects:  96% (378/393)[Kremote: Counting objects:  97% (382/393)[Kremote: Counting objects:  98% (386/393)[Kremote: Counting objects:  99% (390/393)[Kremote: Counting objects: 100% (393/393)[Kremote: Counting objects: 100% (393/393), done.
+[Kremote: Compressing objects:   0% (1/205)[Kremote: Compressing objects:   1% (3/205)[Kremote: Compressing objects:   2% (5/205)[Kremote: Compressing objects:   3% (7/205)[Kremote: Compressing objects:   4% (9/205)[Kremote: Compressing objects:   5% (11/205)[Kremote: Compressing objects:   6% (13/205)[Kremote: Compressing objects:   7% (15/205)[Kremote: Compressing objects:   8% (17/205)[Kremote: Compressing objects:   9% (19/205)[Kremote: Compressing objects:  10% (21/205)[Kremote: Compressing objects:  11% (23/205)[Kremote: Compressing objects:  12% (25/205)[Kremote: Compressing objects:  13% (27/205)[Kremote: Compressing objects:  14% (29/205)[Kremote: Compressing objects:  15% (31/205)[Kremote: Compressing objects:  16% (33/205)[Kremote: Compressing objects:  17% (35/205)[Kremote: Compressing objects:  18% (37/205)[Kremote: Compressing objects:  19% (39/205)[Kremote: Compressing objects:  20% (41/205)[Kremote: Compressing objects:  21% (44/205)[Kremote: Compressing objects:  22% (46/205)[Kremote: Compressing objects:  23% (48/205)[Kremote: Compressing objects:  24% (50/205)[Kremote: Compressing objects:  25% (52/205)[Kremote: Compressing objects:  26% (54/205)[Kremote: Compressing objects:  27% (56/205)[Kremote: Compressing objects:  28% (58/205)[Kremote: Compressing objects:  29% (60/205)[Kremote: Compressing objects:  30% (62/205)[Kremote: Compressing objects:  31% (64/205)[Kremote: Compressing objects:  32% (66/205)[Kremote: Compressing objects:  33% (68/205)[Kremote: Compressing objects:  34% (70/205)[Kremote: Compressing objects:  35% (72/205)[Kremote: Compressing objects:  36% (74/205)[Kremote: Compressing objects:  37% (76/205)[Kremote: Compressing objects:  38% (78/205)[Kremote: Compressing objects:  39% (80/205)[Kremote: Compressing objects:  40% (82/205)[Kremote: Compressing objects:  41% (85/205)[Kremote: Compressing objects:  42% (87/205)[Kremote: Compressing objects:  43% (89/205)[Kremote: Compressing objects:  44% (91/205)[Kremote: Compressing objects:  45% (93/205)[Kremote: Compressing objects:  46% (95/205)[Kremote: Compressing objects:  47% (97/205)[Kremote: Compressing objects:  48% (99/205)[Kremote: Compressing objects:  49% (101/205)[Kremote: Compressing objects:  50% (103/205)[Kremote: Compressing objects:  51% (105/205)[Kremote: Compressing objects:  52% (107/205)[Kremote: Compressing objects:  53% (109/205)[Kremote: Compressing objects:  54% (111/205)[Kremote: Compressing objects:  55% (113/205)[Kremote: Compressing objects:  56% (115/205)[Kremote: Compressing objects:  57% (117/205)[Kremote: Compressing objects:  58% (119/205)[Kremote: Compressing objects:  59% (121/205)[Kremote: Compressing objects:  60% (123/205)[Kremote: Compressing objects:  61% (126/205)[Kremote: Compressing objects:  62% (128/205)[Kremote: Compressing objects:  63% (130/205)[Kremote: Compressing objects:  64% (132/205)[Kremote: Compressing objects:  65% (134/205)[Kremote: Compressing objects:  66% (136/205)[Kremote: Compressing objects:  67% (138/205)[Kremote: Compressing objects:  68% (140/205)[Kremote: Compressing objects:  69% (142/205)[Kremote: Compressing objects:  70% (144/205)[Kremote: Compressing objects:  71% (146/205)[Kremote: Compressing objects:  72% (148/205)[Kremote: Compressing objects:  73% (150/205)[Kremote: Compressing objects:  74% (152/205)[Kremote: Compressing objects:  75% (154/205)[Kremote: Compressing objects:  76% (156/205)[Kremote: Compressing objects:  77% (158/205)[Kremote: Compressing objects:  78% (160/205)[Kremote: Compressing objects:  79% (162/205)[Kremote: Compressing objects:  80% (164/205)[Kremote: Compressing objects:  81% (167/205)[Kremote: Compressing objects:  82% (169/205)[Kremote: Compressing objects:  83% (171/205)[Kremote: Compressing objects:  84% (173/205)[Kremote: Compressing objects:  85% (175/205)[Kremote: Compressing objects:  86% (177/205)[Kremote: Compressing objects:  87% (179/205)[Kremote: Compressing objects:  88% (181/205)[Kremote: Compressing objects:  89% (183/205)[Kremote: Compressing objects:  90% (185/205)[Kremote: Compressing objects:  91% (187/205)[Kremote: Compressing objects:  92% (189/205)[Kremote: Compressing objects:  93% (191/205)[Kremote: Compressing objects:  94% (193/205)[Kremote: Compressing objects:  95% (195/205)[Kremote: Compressing objects:  96% (197/205)[Kremote: Compressing objects:  97% (199/205)[Kremote: Compressing objects:  98% (201/205)[Kremote: Compressing objects:  99% (203/205)[Kremote: Compressing objects: 100% (205/205)[Kremote: Compressing objects: 100% (205/205), done.
+Receiving objects:   0% (1/393)Receiving o
+
+[ESTADO-INICIAL-0cae72b3c8] INICIO 2026-11-16T18:58:12-03:00
+Implementacao e verificacao executadas pelo assistente a pedido do usuario.
+Etapa: allocation zerada, need copiada de maximum e impressao do estado inicial.
+Estes testes sao automatizados; nao representam validacao manual do aluno.
+SHA256 banker.c: ad5354a5ae43f526cc0d3d55ffa276e5aad3b413fc55dd6faf93ed9ee0cf2f4f
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ make clean
+EXIT: 0
+STDOUT:
+rm -f banker
+STDERR:
+(vazio)
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ make
+EXIT: 0
+STDOUT:
+cc -std=c11 -Wall -Wextra -Wpedantic banker.c -o banker
+STDERR:
+(vazio)
+CASO 01: original_5_clientes_3_recursos
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: MAXIMUM=[[7, 5, 3], [3, 2, 2], [9, 0, 2], [2, 2, 2], [4, 3, 3]]; ALLOCATION=0; NEED=MAXIMUM; AVAILABLE=['10', '5', '7']; exit=0.
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ ./banker 10 5 7
+EXIT: 0
+STDOUT:
+MAXIMUM | ALLOCATION | NEED
+7 5 3 | 0 0 0 | 7 5 3 
+3 2 2 | 0 0 0 | 3 2 2 
+9 0 2 | 0 0 0 | 9 0 2 
+2 2 2 | 0 0 0 | 2 2 2 
+4 3 3 | 0 0 0 | 4 3 3 
+AVAILABLE 10 5 7
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 02: um_cliente_zero_sem_quebra_final
+customer.txt (bytes Python): b'0'
+Esperado: MAXIMUM=[[0]]; ALLOCATION=0; NEED=MAXIMUM; AVAILABLE=['0']; exit=0.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/02-um_cliente_zero_sem_quebra_final
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 0
+EXIT: 0
+STDOUT:
+MAXIMUM | ALLOCATION | NEED
+0 | 0 | 0 
+AVAILABLE 0
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 03: dois_clientes_quatro_recursos
+customer.txt (bytes Python): b'1,2,3,4\n4,3,2,1\n'
+Esperado: MAXIMUM=[[1, 2, 3, 4], [4, 3, 2, 1]]; ALLOCATION=0; NEED=MAXIMUM; AVAILABLE=['8', '8', '8', '8']; exit=0.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/03-dois_clientes_quatro_recursos
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 8 8 8 8
+EXIT: 0
+STDOUT:
+MAXIMUM | ALLOCATION | NEED
+1 2 3 4 | 0 0 0 0 | 1 2 3 4 
+4 3 2 1 | 0 0 0 0 | 4 3 2 1 
+AVAILABLE 8 8 8 8
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 04: dois_clientes_um_recurso
+customer.txt (bytes Python): b'2\n7\n'
+Esperado: MAXIMUM=[[2], [7]]; ALLOCATION=0; NEED=MAXIMUM; AVAILABLE=['10']; exit=0.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/04-dois_clientes_um_recurso
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 10
+EXIT: 0
+STDOUT:
+MAXIMUM | ALLOCATION | NEED
+2 | 0 | 2 
+7 | 0 | 7 
+AVAILABLE 10
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 05: matrizes_todas_zeradas
+customer.txt (bytes Python): b'0,0,0\n0,0,0\n'
+Esperado: MAXIMUM=[[0, 0, 0], [0, 0, 0]]; ALLOCATION=0; NEED=MAXIMUM; AVAILABLE=['0', '0', '0']; exit=0.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/05-matrizes_todas_zeradas
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 0 0 0
+EXIT: 0
+STDOUT:
+MAXIMUM | ALLOCATION | NEED
+0 0 0 | 0 0 0 | 0 0 0 
+0 0 0 | 0 0 0 | 0 0 0 
+AVAILABLE 0 0 0
+STDERR:
+(vazio)
+RESULTADO: PASSOU
+CASO 06: dimensoes_incompativeis
+customer.txt (bytes Python): b'\xef\xbb\xbf7,5,3\r\n3,2,2\r\n9,0,2\r\n2,2,2\r\n4,3,3'
+Esperado: exit=1; stderr contem 'esperados 2 inteiros'.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/06-dimensoes_incompativeis
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 10 5
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 2 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 07: campo_vazio
+customer.txt (bytes Python): b'1,,3'
+Esperado: exit=1; stderr contem 'linha 1 invalida'.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/07-campo_vazio
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: linha 1 invalida; esperados 3 inteiros nao negativos separados por virgula.
+RESULTADO: PASSOU
+CASO 08: arquivo_ausente
+customer.txt (bytes Python): None
+Esperado: exit=1; stderr contem 'customer.txt'.
+CWD: /tmp/banker-estado-inicial-6gh6ub4t/08-arquivo_ausente
+$ /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB/banker 10 5 7
+EXIT: 1
+STDOUT:
+(vazio)
+STDERR:
+customer.txt: No such file or directory
+RESULTADO: PASSOU
+RESUMO: 8/8 casos aprovados; compilacao sem avisos.
+Invariantes verificadas nos casos validos: allocation=0; need+allocation=maximum; available+soma(allocation)=total inicial.
+Limites: falha de alocacao nao foi simulada; RQ, RL, * e teste de seguranca continuam pendentes.
+[ESTADO-INICIAL-0cae72b3c8] FIM 2026-11-16T18:58:12-03:00
+bjects:   1% (4/393)Receiving objects:   2% (8/393)Receiving objects:   3% (12/393)Receiving objects:   4% (16/393)Receiving objects:   5% (20/393)Receiving objects:   6% (24/393)Receiving objects:   7% (28/393)Receiving objects:   8% (32/393)Receiving objects:   9% (36/393)Receiving objects:  10% (40/393)Receiving objects:  11% (44/393)Receiving objects:  12% (48/393)Receiving objects:  13% (52/393)Receiving objects:  14% (56/393)Receiving objects:  15% (59/393)Receiving objects:  16% (63/393)Receiving objects:  17% (67/393)Receiving objects:  18% (71/393)Receiving objects:  19% (75/393)Receiving objects:  20% (79/393)Receiving objects:  21% (83/393)Receiving objects:  22% (87/393)Receiving objects:  23% (91/393)Receiving objects:  24% (95/393)Receiving objects:  25% (99/393)Receiving objects:  26% (103/393)Receiving objects:  27% (107/393)Receiving objects:  28% (111/393)Receiving objects:  29% (114/393)Receiving objects:  30% (118/393)Receiving objects:  31% (122/393)Receiving objects:  32% (126/393)Receiving objects:  33% (130/393)Receiving objects:  34% (134/393)Receiving objects:  35% (138/393)Receiving objects:  36% (142/393)Receiving objects:  37% (146/393)Receiving objects:  38% (150/393)Receiving objects:  39% (154/393)Receiving objects:  40% (158/393)Receiving objects:  41% (162/393)Receiving objects:  42% (166/393)Receiving objects:  43% (169/393)Receiving objects:  44% (173/393)Receiving objects:  45% (177/393)^Cfetch-pack: unexpected disconnect while reading sideband packet
+[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
+]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspace/deadlock/Deadlock_VSB [90mmain[90m* [36m⇡
+[31m❯[m [38;2;205;214;244m[K[2Ca[3C[38;2;243;139;168ma[38;2;205;214;244m[3C[38;2;108;112;134m52dec [38;2;205;214;244m[3C[38;2;243;139;168md[38;2;205;214;244m[K[4C[38;2;108;112;134mb [38;2;205;214;244m[4C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[K[3C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[K[2C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=a[3C[38;2;243;139;168ma[38;2;205;214;244m[3C[38;2;108;112;134m52dec [38;2;205;214;244m[3C[38;2;243;139;168md[38;2;205;214;244m[K[4C[38;2;108;112;134mb [38;2;205;214;244m[4C[38;2;243;139;168md[38;2;205;214;244m[K[5C[38;2;108;112;134mftinfo [38;2;205;214;244m[5C[38;2;243;139;168m [38;2;205;214;244m[K[6C [6Cb[7C[38;2;242;205;205;4mb[38;2;205;214;244;24m[7C[38;2;108;112;134manker [38;2;205;214;244m[7C[38;2;242;205;205;4ma[38;2;108;112;134;24mnker [38;2;205;214;244m[8C[38;2;242;205;205;4mn[38;2;108;112;134;24mker [38;2;205;214;244m[9C[38;2;242;205;205;4me[38;2;205;214;244;24m[K[10C[4D[38;2;242;205;205mbane[38;2;205;214;244m[10C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[38;2;108;112;134mker [38;2;205;214;244m[9C[3D[38;2;242;205;205;4mban[38;2;108;112;134;24mker [38;2;205;214;244m[9C[7Dadd banker [13C[11D[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker[38;2;205;214;244;24m [13C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=[K[12C[38;2;242;205;205;4m.[38;2;205;214;244;24m[13C[38;2;108;112;134mc [38;2;205;214;244m[13C[38;2;242;205;205;4mc[38;2;108;112;134;24m [38;2;205;214;244m[14C[38;2;242;205;205;4m [38;2;205;214;244;24m[15C [15Cm[16C[38;2;242;205;205mm[38;2;205;214;244m[16C[38;2;242;205;205mM[38;2;108;112;134makefile [38;2;205;214;244m[16C[38;2;242;205;205ma[38;2;108;112;134mkefile [38;2;205;214;244m[17C[38;2;242;205;205mk[38;2;108;112;134mefile [38;2;205;214;244m[18C[38;2;242;205;205me[38;2;108;112;134mfile [38;2;205;214;244m[19C[17Dadd banker.c Makefile [24C[22D[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [24Ce[25C[38;2;242;205;205;4me[38;2;205;214;244;24m[25C[38;2;108;112;134mvidencias.log [38;2;205;214;244m[25C[38;2;242;205;205;4mv[38;2;108;112;134;24midencias.log [38;2;205;214;244m[26C[38;2;242;205;205;4mi[38;2;108;112;134;24mdencias.log [38;2;205;214;244m[27C[38;2;242;205;205;4md[38;2;108;112;134;24mencias.log [38;2;205;214;244m[28C[38;2;242;205;205;4me[38;2;108;112;134;24mncias.log [38;2;205;214;244m[29C[27Dadd banker.c Makefile evidencias.log [39C[37D[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m [39C[?2004l[?2031l[>4;0m>
+[m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: add banker.c Makefile evidencias.log  - add\[mfish: Unknown command: add
+[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
+]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspace/deadlock/Deadlock_VSB [90mmain[90m* [36m⇡
+[31m❯[m [38;2;205;214;244m[K[2C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=add banker.c Makefile evidencias.log[38C[36D[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[38C[24C[14C[38;2;108;112;134m [38;2;205;214;244m[24C[15C[6C[2Cg[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[3C[38;2;243;139;168mgadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[3C[36C[38;2;108;112;134m [38;2;205;214;244m[3C[38;2;243;139;168miadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[4C[36C[38;2;108;112;134m [38;2;205;214;244m[4C[38;2;243;139;168mtadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[5C[36C[38;2;108;112;134m [38;2;205;214;244m[5C[38;2;243;139;168m add[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[6C[4D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[6C[36C[38;2;108;112;134m [38;2;205;214;244m[6C[?2004l[?2031l[>4;0m>[36C[K[42C
+[m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: git add banker.c Makefile evidencias.log - git\[m[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
+]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspac

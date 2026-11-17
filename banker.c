@@ -141,13 +141,46 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
 
-    printf("MAXIMUM (%zu clientes)\n", quantidade_clientes);
+    size_t total_elementos =
+        quantidade_clientes * (size_t) quantidade_recursos;
+
+    int *allocation = calloc(total_elementos, sizeof *allocation);
+    int *need = malloc(total_elementos * sizeof *need);
+
+    if (allocation == NULL || need == NULL) {
+        fprintf(stderr, "Erro ao reservar memoria para as matrizes.\n");
+        free(need);
+        free(allocation);
+        free(maximum);
+        free(available);
+        return EXIT_FAILURE;
+    }
+
+    /* Inicialmente, nenhum recurso foi alocado aos clientes. */
+    for (size_t pos = 0; pos < total_elementos; pos++) {
+        need[pos] = maximum[pos];
+    }
+
+    printf("MAXIMUM | ALLOCATION | NEED\n");
 
     for (size_t i = 0; i < quantidade_clientes; i++) {
         for (int j = 0; j < quantidade_recursos; j++) {
-            printf("%d%c", maximum[i * quantidade_recursos + j],
-                j + 1 == quantidade_recursos ? '\n' : ' ');
+            printf("%d ", maximum[i * quantidade_recursos + j]);
         }
+
+        printf("| ");
+
+        for (int j = 0; j < quantidade_recursos; j++) {
+            printf("%d ", allocation[i * quantidade_recursos + j]);
+        }
+
+        printf("| ");
+
+        for (int j = 0; j < quantidade_recursos; j++) {
+            printf("%d ", need[i * quantidade_recursos + j]);
+        }
+
+        printf("\n");
     }
 
     /* Mostra o estado inicial dos recursos disponíveis. */
@@ -157,6 +190,8 @@ int main(int argc, char *argv[])
     }
     printf("\n");
 
+    free(need);
+    free(allocation);
     free(maximum);
     free(available);
     return EXIT_SUCCESS;
