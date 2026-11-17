@@ -1022,3 +1022,32 @@ bjects:   1% (4/393)Receiving objects:   2% (8/393)Receiving objects:   3% (12
 [31m❯[m [38;2;205;214;244m[K[2C[?2004l[?2031l[>4;0m>[?2004h[?2031h[>4;1m=add banker.c Makefile evidencias.log[38C[36D[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[38C[24C[14C[38;2;108;112;134m [38;2;205;214;244m[24C[15C[6C[2Cg[38;2;243;139;168madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[3C[38;2;243;139;168mgadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[3C[36C[38;2;108;112;134m [38;2;205;214;244m[3C[38;2;243;139;168miadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[4C[36C[38;2;108;112;134m [38;2;205;214;244m[4C[38;2;243;139;168mtadd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[5C[36C[38;2;108;112;134m [38;2;205;214;244m[5C[38;2;243;139;168m add[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[6C[4D[38;2;137;180;250mgit[38;2;205;214;244m [38;2;242;205;205madd[38;2;205;214;244m [38;2;242;205;205;4mbanker.c[38;2;205;214;244;24m [38;2;242;205;205;4mMakefile[38;2;205;214;244;24m [38;2;242;205;205;4mevidencias.log[38;2;205;214;244;24m[6C[36C[38;2;108;112;134m [38;2;205;214;244m[6C[?2004l[?2031l[>4;0m>[36C[K[42C
 [m]0;~/Desktop/workspace/deadlock/Deadlock_VSB: git add banker.c Makefile evidencias.log - git\[m[?25h[2m⏎[m                                                                                                                                                                                                                                           ⏎ [K[K
 ]7;file:///home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB]0;~/Desktop/workspace/deadlock/Deadlock_VSB - fish\[m]11;?\[6n[0c[?2004h[?2031h[>4;1m=[K[34m~/Desktop/workspac
+
+[CONCLUSAO BANKER] 2026-11-16T23:06:48-03:00 — Teste de seguranca
+Execucao automatizada pelo assistente, autorizada pelo aluno.
+SHA256 banker.c: 91c6a782a38090ef70bd008be1f14b8835a2475eff5e78c0bb3f37e8774ccdb1
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ make
+STDOUT:
+cc -std=c11 -Wall -Wextra -Wpedantic banker.c -o banker
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ cc -std=c11 -Wall -Wextra -Wpedantic -Werror /tmp/banker-conclusao/test_safety.c -o /tmp/banker-conclusao/test_safety
+STDOUT:
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ /tmp/banker-conclusao/test_safety
+STDOUT:
+PASSOU: estado seguro, inseguro, dependencia reversa e preservacao do estado.
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+RESULTADO: PASSOU
+[FIM CONCLUSAO BANKER]

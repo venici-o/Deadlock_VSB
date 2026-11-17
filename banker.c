@@ -8,6 +8,55 @@
 #include <stdint.h>
 #include <string.h>
 
+typedef struct {
+    size_t clientes;
+    size_t recursos;
+    int *available;
+    int *maximum;
+    int *allocation;
+    int *need;
+} Estado;
+
+/* Retorna 1 se seguro, 0 se inseguro e -1 em falha de memoria.
+   A simulacao nao modifica as matrizes reais. */
+int estado_seguro(const Estado *estado)
+{
+    int *work = malloc(estado->recursos * sizeof *work);
+    unsigned char *finish = calloc(estado->clientes, sizeof *finish);
+    if (work == NULL || finish == NULL) {
+        free(work);
+        free(finish);
+        return -1;
+    }
+
+    memcpy(work, estado->available, estado->recursos * sizeof *work);
+    size_t concluidos = 0;
+    int avancou;
+    do {
+        avancou = 0;
+        for (size_t i = 0; i < estado->clientes; i++) {
+            if (finish[i])
+                continue;
+            size_t j;
+            for (j = 0; j < estado->recursos; j++) {
+                if (estado->need[i * estado->recursos + j] > work[j])
+                    break;
+            }
+            if (j != estado->recursos)
+                continue;
+            for (j = 0; j < estado->recursos; j++)
+                work[j] += estado->allocation[i * estado->recursos + j];
+            finish[i] = 1;
+            concluidos++;
+            avancou = 1;
+        }
+    } while (avancou && concluidos < estado->clientes);
+
+    free(finish);
+    free(work);
+    return concluidos == estado->clientes;
+}
+
 static int *ler_clientes(const char *nome, size_t recursos, size_t *clientes)
 {
     FILE *arquivo = fopen(nome, "r");
