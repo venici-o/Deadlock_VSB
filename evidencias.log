@@ -1051,3 +1051,33 @@ STDERR:
 EXIT: 0; ESPERADO: 0
 RESULTADO: PASSOU
 [FIM CONCLUSAO BANKER]
+
+
+[CONCLUSAO BANKER] 2026-11-16T23:07:35-03:00 — Solicitacoes e liberacoes
+Execucao automatizada pelo assistente, autorizada pelo aluno.
+SHA256 banker.c: 97fb2373771e7f6011eb9df8b06622f33a2be89c95aa75e742aeb185c4cdcb8f
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ make
+STDOUT:
+cc -std=c11 -Wall -Wextra -Wpedantic banker.c -o banker
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ cc -std=c11 -Wall -Wextra -Wpedantic -Werror /tmp/banker-conclusao/test_operations.c -o /tmp/banker-conclusao/test_operations
+STDOUT:
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+CWD: /home/vinicio/Desktop/workspace/deadlock/Deadlock_VSB
+$ /tmp/banker-conclusao/test_operations
+STDOUT:
+PASSOU: dez operacoes do exemplo, tres recusas, rollback, liberacao invalida, liberacao total e invariantes.
+
+STDERR:
+
+EXIT: 0; ESPERADO: 0
+RESULTADO: PASSOU
+[FIM CONCLUSAO BANKER]

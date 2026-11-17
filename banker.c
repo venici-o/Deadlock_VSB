@@ -17,6 +17,14 @@ typedef struct {
     int *need;
 } Estado;
 
+typedef enum {
+    PEDIDO_ACEITO,
+    EXCEDE_MAXIMO,
+    RECURSOS_INSUFICIENTES,
+    ESTADO_INSEGURO,
+    ERRO_MEMORIA
+} ResultadoPedido;
+
 /* Retorna 1 se seguro, 0 se inseguro e -1 em falha de memoria.
    A simulacao nao modifica as matrizes reais. */
 int estado_seguro(const Estado *estado)
@@ -55,6 +63,50 @@ int estado_seguro(const Estado *estado)
     free(finish);
     free(work);
     return concluidos == estado->clientes;
+}
+
+ResultadoPedido solicitar_recursos(Estado *estado, size_t cliente, const int *pedido)
+{
+    size_t base = cliente * estado->recursos;
+    for (size_t j = 0; j < estado->recursos; j++) {
+        if (pedido[j] > estado->need[base + j])
+            return EXCEDE_MAXIMO;
+    }
+    for (size_t j = 0; j < estado->recursos; j++) {
+        if (pedido[j] > estado->available[j])
+            return RECURSOS_INSUFICIENTES;
+    }
+    for (size_t j = 0; j < estado->recursos; j++) {
+        estado->available[j] -= pedido[j];
+        estado->allocation[base + j] += pedido[j];
+        estado->need[base + j] -= pedido[j];
+    }
+    int seguro = estado_seguro(estado);
+    if (seguro == 1)
+        return PEDIDO_ACEITO;
+
+    /* Uma recusa ou falha na simulacao deve restaurar todo o estado. */
+    for (size_t j = 0; j < estado->recursos; j++) {
+        estado->available[j] += pedido[j];
+        estado->allocation[base + j] -= pedido[j];
+        estado->need[base + j] += pedido[j];
+    }
+    return seguro < 0 ? ERRO_MEMORIA : ESTADO_INSEGURO;
+}
+
+int liberar_recursos(Estado *estado, size_t cliente, const int *liberacao)
+{
+    size_t base = cliente * estado->recursos;
+    for (size_t j = 0; j < estado->recursos; j++) {
+        if (liberacao[j] > estado->allocation[base + j])
+            return 0;
+    }
+    for (size_t j = 0; j < estado->recursos; j++) {
+        estado->allocation[base + j] -= liberacao[j];
+        estado->need[base + j] += liberacao[j];
+        estado->available[j] += liberacao[j];
+    }
+    return 1;
 }
 
 static int *ler_clientes(const char *nome, size_t recursos, size_t *clientes)
