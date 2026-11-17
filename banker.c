@@ -6,6 +6,7 @@
 #include <limits.h>
 #include <ctype.h>
 #include <stdint.h>
+#include <inttypes.h>
 #include <string.h>
 
 typedef struct {
@@ -27,7 +28,7 @@ typedef enum {
 
 /* Retorna 1 se seguro, 0 se inseguro e -1 em falha de memoria.
    A simulacao nao modifica as matrizes reais. */
-int estado_seguro(const Estado *estado)
+static int estado_seguro(const Estado *estado)
 {
     int *work = malloc(estado->recursos * sizeof *work);
     unsigned char *finish = calloc(estado->clientes, sizeof *finish);
@@ -65,7 +66,7 @@ int estado_seguro(const Estado *estado)
     return concluidos == estado->clientes;
 }
 
-ResultadoPedido solicitar_recursos(Estado *estado, size_t cliente, const int *pedido)
+static ResultadoPedido solicitar_recursos(Estado *estado, size_t cliente, const int *pedido)
 {
     size_t base = cliente * estado->recursos;
     for (size_t j = 0; j < estado->recursos; j++) {
@@ -94,7 +95,7 @@ ResultadoPedido solicitar_recursos(Estado *estado, size_t cliente, const int *pe
     return seguro < 0 ? ERRO_MEMORIA : ESTADO_INSEGURO;
 }
 
-int liberar_recursos(Estado *estado, size_t cliente, const int *liberacao)
+static int liberar_recursos(Estado *estado, size_t cliente, const int *liberacao)
 {
     size_t base = cliente * estado->recursos;
     for (size_t j = 0; j < estado->recursos; j++) {
@@ -195,6 +196,199 @@ falha:
     return NULL;
 }
 
+static void imprimir_vetor(FILE *saida, const int *vetor, size_t tamanho)
+{
+    for (size_t j = 0; j < tamanho; j++)
+        fprintf(saida, "%s%d", j == 0 ? "" : " ", vetor[j]);
+}
+
+static size_t largura_vetor(const int *vetor, size_t tamanho)
+{
+    size_t largura = tamanho - 1;
+    for (size_t j = 0; j < tamanho; j++)
+        largura += (size_t) snprintf(NULL, 0, "%d", vetor[j]);
+    return largura;
+}
+
+static void preencher_coluna(FILE *saida, size_t usado, size_t largura)
+{
+    while (usado < largura) {
+        fputc(' ', saida);
+        usado++;
+    }
+    fputs("|   ", saida);
+}
+
+static void imprimir_estado(FILE *saida, const Estado *estado)
+{
+    size_t largura = 0;
+    for (size_t i = 0; i < estado->clientes; i++) {
+        size_t atual = largura_vetor(estado->maximum + i * estado->recursos,
+                                    estado->recursos);
+        if (atual > largura)
+            largura = atual;
+    }
+    size_t primeira = largura + 2 > 10 ? largura + 2 : 10;
+    size_t segunda = largura + 2 > 12 ? largura + 2 : 12;
+    fputs("MAXIMUM", saida);
+    preencher_coluna(saida, 7, primeira);
+    fputs("ALLOCATION", saida);
+    preencher_coluna(saida, 10, segunda);
+    fputs("NEED\n", saida);
+    for (size_t i = 0; i < estado->clientes; i++) {
+        size_t base = i * estado->recursos;
+        imprimir_vetor(saida, estado->maximum + base, estado->recursos);
+        preencher_coluna(saida, largura_vetor(estado->maximum + base, estado->recursos), primeira);
+        imprimir_vetor(saida, estado->allocation + base, estado->recursos);
+        preencher_coluna(saida, largura_vetor(estado->allocation + base, estado->recursos), segunda);
+        imprimir_vetor(saida, estado->need + base, estado->recursos);
+        fputs(" \n", saida);
+    }
+    fputs("AVAILABLE ", saida);
+    imprimir_vetor(saida, estado->available, estado->recursos);
+    fputs(" \n", saida);
+}
+
+/* A validacao de um comando inteiro antecede qualquer alteracao do estado. */
+static int interpretar_comando(char *cursor, const Estado *estado,
+                              char *operacao, size_t *cliente, int *valores)
+{
+    while (isspace((unsigned char) *cursor))
+        cursor++;
+    if (*cursor == '*') {
+        *operacao = '*';
+        cursor++;
+        while (isspace((unsigned char) *cursor))
+            cursor++;
+        return *cursor == '\0';
+    }
+    char *fim_token = cursor;
+    while (*fim_token && !isspace((unsigned char) *fim_token))
+        fim_token++;
+    if (fim_token - cursor != 2 || cursor[0] != 'R' ||
+        (cursor[1] != 'Q' && cursor[1] != 'L'))
+        return 0;
+    *operacao = cursor[1];
+    cursor = fim_token;
+    while (isspace((unsigned char) *cursor))
+        cursor++;
+    if (*cursor == '-')
+        return 0;
+    errno = 0;
+    char *fim;
+    uintmax_t indice = strtoumax(cursor, &fim, 10);
+    if (errno == ERANGE || fim == cursor || indice >= estado->clientes ||
+        (*fim && !isspace((unsigned char) *fim)))
+        return 0;
+    *cliente = (size_t) indice;
+    cursor = fim;
+    for (size_t j = 0; j < estado->recursos; j++) {
+        errno = 0;
+        long valor = strtol(cursor, &fim, 10);
+        if (errno == ERANGE || fim == cursor || valor < 0 || valor > INT_MAX ||
+            (*fim && !isspace((unsigned char) *fim)))
+            return 0;
+        valores[j] = (int) valor;
+        cursor = fim;
+    }
+    while (isspace((unsigned char) *cursor))
+        cursor++;
+    return *cursor == '\0';
+}
+
+static int processar_comandos(Estado *estado)
+{
+    FILE *entrada = fopen("commands.txt", "r");
+    if (entrada == NULL) {
+        perror("commands.txt");
+        return 0;
+    }
+    FILE *saida = fopen("result.txt", "w");
+    if (saida == NULL) {
+        perror("result.txt");
+        fclose(entrada);
+        return 0;
+    }
+    int *valores = malloc(estado->recursos * sizeof *valores);
+    char *linha = NULL;
+    size_t capacidade = 0, numero = 0;
+    ssize_t tamanho;
+    int sucesso = 0;
+    if (valores == NULL) {
+        fprintf(stderr, "Erro ao reservar memoria para os comandos.\n");
+        goto fim;
+    }
+    while ((tamanho = getline(&linha, &capacidade, entrada)) != -1) {
+        numero++;
+        char *cursor = linha;
+        if (numero == 1 && tamanho >= 3 && memcmp(linha, "\xEF\xBB\xBF", 3) == 0)
+            cursor += 3;
+        char operacao;
+        size_t cliente = 0;
+        if (memchr(linha, '\0', (size_t) tamanho) != NULL ||
+            !interpretar_comando(cursor, estado, &operacao, &cliente, valores)) {
+            fprintf(stderr, "commands.txt: linha %zu invalida; use RQ/RL, cliente valido e %zu quantidades, ou *.\n",
+                    numero, estado->recursos);
+            goto fim;
+        }
+        if (operacao == '*') {
+            imprimir_estado(saida, estado);
+        } else if (operacao == 'L') {
+            if (!liberar_recursos(estado, cliente, valores)) {
+                fprintf(stderr, "commands.txt: linha %zu: liberacao excede a alocacao do cliente %zu.\n", numero, cliente);
+                goto fim;
+            }
+            fprintf(saida, "Release from customer %zu the resources ", cliente);
+            imprimir_vetor(saida, valores, estado->recursos);
+            fputc('\n', saida);
+        } else {
+            ResultadoPedido resultado = solicitar_recursos(estado, cliente, valores);
+            if (resultado == ERRO_MEMORIA) {
+                fprintf(stderr, "Erro de memoria durante o teste de seguranca (linha %zu).\n", numero);
+                goto fim;
+            }
+            if (resultado == PEDIDO_ACEITO) {
+                fprintf(saida, "Allocate to customer %zu the resources ", cliente);
+                imprimir_vetor(saida, valores, estado->recursos);
+                fputc('\n', saida);
+            } else if (resultado == RECURSOS_INSUFICIENTES) {
+                fputs("The resources ", saida);
+                imprimir_vetor(saida, estado->available, estado->recursos);
+                fprintf(saida, " are not enough to customer %zu request ", cliente);
+                imprimir_vetor(saida, valores, estado->recursos);
+                fputs(" \n", saida);
+            } else {
+                fprintf(saida, "The customer %zu request ", cliente);
+                imprimir_vetor(saida, valores, estado->recursos);
+                fputs(resultado == EXCEDE_MAXIMO ?
+                      " was denied because exceed its maximum allocation\n" :
+                      " was denied because result in an unsafe state\n", saida);
+            }
+        }
+        if (ferror(saida)) {
+            fprintf(stderr, "Erro ao escrever result.txt.\n");
+            goto fim;
+        }
+    }
+    if (!feof(entrada)) {
+        fprintf(stderr, "Erro ao ler commands.txt.\n");
+        goto fim;
+    }
+    sucesso = 1;
+fim:
+    free(linha);
+    free(valores);
+    if (fclose(entrada) != 0) {
+        perror("commands.txt");
+        sucesso = 0;
+    }
+    if (fclose(saida) != 0) {
+        perror("result.txt");
+        sucesso = 0;
+    }
+    return sucesso;
+}
+
 int main(int argc, char *argv[])
 {
     if (argc < 2) {
@@ -262,39 +456,14 @@ int main(int argc, char *argv[])
         need[pos] = maximum[pos];
     }
 
-    printf("MAXIMUM | ALLOCATION | NEED\n");
-
-    for (size_t i = 0; i < quantidade_clientes; i++) {
-        for (int j = 0; j < quantidade_recursos; j++) {
-            printf("%d ", maximum[i * quantidade_recursos + j]);
-        }
-
-        printf("| ");
-
-        for (int j = 0; j < quantidade_recursos; j++) {
-            printf("%d ", allocation[i * quantidade_recursos + j]);
-        }
-
-        printf("| ");
-
-        for (int j = 0; j < quantidade_recursos; j++) {
-            printf("%d ", need[i * quantidade_recursos + j]);
-        }
-
-        printf("\n");
-    }
-
-    /* Mostra o estado inicial dos recursos disponíveis. */
-    printf("AVAILABLE");
-    for (int i = 0; i < quantidade_recursos; i++) {
-        printf(" %d", available[i]);
-    }
-    printf("\n");
+    Estado estado = {quantidade_clientes, (size_t) quantidade_recursos,
+                     available, maximum, allocation, need};
+    int sucesso = processar_comandos(&estado);
 
     free(need);
     free(allocation);
     free(maximum);
     free(available);
-    return EXIT_SUCCESS;
+    return sucesso ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 
